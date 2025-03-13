@@ -34,7 +34,7 @@ apt install -y apache2
 
 ### 📌 5. Configurar el Mensaje de Bienvenida
 ```bash
-echo "Hola, soy un servidor con Apache Server. Si ves este mensaje, el servidor está activo." > /var/www/html/index.html
+echo "Hola, soy un servidor con Apache Server. Si ves este mensaje, el servidor esta activo." > /var/www/html/index.html
 ```
 ![Evidencia](img/5.png)
 
