@@ -50,6 +50,7 @@ En el navegador local, ingresa la siguiente URL:
 http://localhost:80
 ```
 ![Evidencia](img/7.png)
+![Evidencia](img/7-1.png)
 
 ---
 
