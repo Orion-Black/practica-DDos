@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado del Servidor Apache</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .status-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .led {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .led.green {
+            background-color: green;
+        }
+        .led.red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hola soy Apache server</h1>
+
+    <div class="status-container">
+        <span>Status del Servidor:</span>
+        <span id="status-text">Active</span>
+        <span id="status-led" class="led green"></span>
+    </div>
+
+    <script>
+        function checkServerStatus() {
+            fetch(window.location.href, { method: 'HEAD' })
+                .then(response => {
+                    document.getElementById("status-text").textContent = "Active";
+                    document.getElementById("status-led").classList.remove("red");
+                    document.getElementById("status-led").classList.add("green");
+                })
+                .catch(error => {
+                    document.getElementById("status-text").textContent = "Inactive";
+                    document.getElementById("status-led").classList.remove("green");
+                    document.getElementById("status-led").classList.add("red");
+                });
+        }
+
+        setInterval(checkServerStatus, 5000); // Verifica cada 5 segundos
+    </script>
+
+</body>
+</html>
