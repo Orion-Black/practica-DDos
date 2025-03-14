@@ -107,7 +107,12 @@ Desde nuestro navegador volvemos a acceder a la pagina del servidor _http://loca
 Para detener el ataque volvemos a la terminal de nuestro contenedor de kali linux y presionamos Ctrl + C.
 
 ![Evidencia](img/13.png)
+
+Detenemos el ataque y mostrara algunas estadisticas del ataque.
+
 ![Evidencia](img/13-2.png)
+
+Finalmente volvemos a acceder y otra vez la pagina cargara con normalidad.
 ![Evidencia](img/13-3.png)
 
 ## 🎯 Conclusión
