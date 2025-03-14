@@ -76,7 +76,7 @@ apt update -y && apt upgrade -y
 ```
 ![Evidencia](img/10.png)
 
-### 📌 4. Instalar Herramientas de Pruebas de Carga (Apache Benchmark, Hping3, Slowloris)
+### 📌 4. Instalar Herramientas de Pruebas de Carga (Apache Benchmark y Hping3)
 ```bash
 apt install -y hping3 apache2-utils
 ```
