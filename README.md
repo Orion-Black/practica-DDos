@@ -107,12 +107,12 @@ Desde nuestro navegador volvemos a acceder a la pagina del servidor _http://loca
 Para detener el ataque volvemos a la terminal de nuestro contenedor de kali linux y presionamos Ctrl + C.
 
 ![Evidencia](img/13.png)
-![Evidencia](img/13-1.png)
+![Evidencia](img/13-2.png)
+![Evidencia](img/13-3.png)
 
 ## 🎯 Conclusión
 
 Después de realizar las pruebas, se puede analizar el impacto de los ataques en el servidor Apache. Se recomienda monitorear el uso de CPU y memoria del contenedor Ubuntu para evaluar el nivel de afectación.
 
-![Evidencia](img/14.png)
-
 ⚠️ **Nota:** Este documento es únicamente con fines educativos. No se debe realizar ningún ataque fuera de un entorno controlado y autorizado.
+
