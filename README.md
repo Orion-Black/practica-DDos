@@ -95,8 +95,8 @@ Aquí la direccion IP puede variar, esta direccion IP se mostro cuando se Inicio
 ```bash
 ab -n 100000 -c 32000 http://172.17.0.2:80/
 ```
-![Evidencia](img/13.png)
-![Evidencia](img/13-1.png)
+![Evidencia](img/12.png)
+
 
 ---
 
@@ -106,7 +106,8 @@ Desde nuestro navegador volvemos a acceder a la pagina del servidor _http://loca
 
 Para detener el ataque volvemos a la terminal de nuestro contenedor de kali linux y presionamos Ctrl + C.
 
-![Evidencia](img/8.png)
+![Evidencia](img/13.png)
+![Evidencia](img/13-1.png)
 
 ## 🎯 Conclusión
 
