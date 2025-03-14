@@ -90,6 +90,8 @@ A continuación, se ejecutará un ataque de inundación TCP aleatoria contra la 
 
 ### 📌 2. Ejecutar Ataque de DDoS con **Apache Benchmark**
 Este comando simulara 32,000 nodos que realizan 100,000 peticiones al servidor de apache de forma que colapse el servicio. 
+Aquí la direccion IP puede variar, esta direccion IP se mostro cuando se Inicio el servidor de apache.
+
 ```bash
 ab -n 100000 -c 32000 http://172.17.0.2:80/
 ```
