@@ -96,6 +96,7 @@ Aquí la direccion IP puede variar, esta direccion IP se mostro cuando se Inicio
 ab -n 100000 -c 32000 http://172.17.0.2:80/
 ```
 ![Evidencia](img/13.png)
+![Evidencia](img/13-1.png)
 
 ---
 
